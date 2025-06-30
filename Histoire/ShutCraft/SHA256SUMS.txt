@@ -1,0 +1,1 @@
+6b2d258182a4320f96dfe57780c0f2f80a28a00e3dc5d225b32064cc8a0b67fe  shutcraft-0.2.0-SNAPSHOT-standalone.jar

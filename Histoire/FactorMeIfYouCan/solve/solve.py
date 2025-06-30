@@ -1,0 +1,43 @@
+from random import randint
+from hashlib import sha256
+
+
+# Parameters
+p = 179645919122665218370356073321625718161366180927991097171077812423770804134430997527071891343437316437954256785673884717937056171407061512922895779863450270363914606101967477817963321256378344749858504249812366042360134525304277131023033503828101237051767356695983
+
+g = 112670084998056353702682586739576094691616594536209417052484445382758427183226397315836516959260013252907122807001511209507863707497790504293505704013559385851675168164952996151400479775184862576038071714392257016344424654225420624394558315749012707222965562825374
+
+# Found using SageMath (Pohlig-Hellman)
+x = 38709985168511002718405378398160131295657480278366293810463737545392856763683952874471191237954575489173345143035044939939826652075860780087725832042385714447452577018765150939043624831623003181772355538146724566609486152410955777832872558793493754172553325869349
+
+
+# ElGamal signature of all commands
+commands = [b"aide", b"mission", b"heure"]
+for msg in commands:
+    # 1. Hash message
+    h = int(sha256(msg).hexdigest(), 16)
+
+    result = None
+    while not result:
+        try:
+            # 2. Generate random nonce, coprime with p - 1
+            while True:
+                k = randint(2, p-2)
+                if pow(k, 1, p-1) != 0:
+                    break
+
+            # 3. Compute r = g ^ k mod p
+            r = pow(g, k, p)
+
+            # 4. Compute s = (h - x * r) * k ^ (-1) mod (p - 1)
+            s = (h - x * r) * pow(k, -1, p-1) % (p-1)
+
+            result = (r, s)
+        except ValueError: # If not invertible, retry
+            continue
+
+    # Print the signature in the format accepted by the server
+    r, s = result
+    print(f"ElGamal sig of {msg} :")
+    print(f"{r},{s}")
+    print()

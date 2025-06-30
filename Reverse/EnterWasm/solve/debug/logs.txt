@@ -1,0 +1,246 @@
+{
+    "$var1": {
+        "type": "i32",
+        "value": 1
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 172
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 220
+    },
+    "$var7": {
+        "type": "i32",
+        "value": 1936941312
+    }
+}
+
+{
+    "$var1": {
+        "type": "i32",
+        "value": 2
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 176
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 135
+    },
+    "$var7": {
+        "type": "i32",
+        "value": 639289088
+    }
+}
+
+{
+    "$var1": {
+        "type": "i32",
+        "value": 3
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 237
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 219
+    },
+    "$var7": {
+        "type": "i32",
+        "value": -143216640
+    }
+}
+
+{
+    "$var1": {
+        "type": "i32",
+        "value": 4
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 200
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 107
+    },
+    "$var7": {
+        "type": "i32",
+        "value": -288824320
+    }
+}
+
+{
+    "$var1": {
+        "type": "i32",
+        "value": 5
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 180
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 124
+    },
+    "$var7": {
+        "type": "i32",
+        "value": -455152128
+    }
+}
+
+{
+    "$var1": {
+        "type": "i32",
+        "value": 6
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 179
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 253
+    },
+    "$var7": {
+        "type": "i32",
+        "value": -588322048
+    }
+}
+
+{
+    "$var1": {
+        "type": "i32",
+        "value": 7
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 2
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 109
+    },
+    "$var7": {
+        "type": "i32",
+        "value": -2015585792
+    }
+}
+
+{
+    "$var1": {
+        "type": "i32",
+        "value": 8
+    },
+    "$var5": {
+        "type": "i32",
+        "value": 70
+    },
+    "$var6": {
+        "type": "i32",
+        "value": 32
+    },
+    "$var7": {
+        "type": "i32",
+        "value": -611853312
+    }
+}
+
+--- CHECK FUNCTION START ---
+Initial memory[0..7] [0x00..0x07]: 70 61 73 73 77 6F 72 64 
+Data at 8 [0x08..0x0F]: DC 87 DB 6B 7C FD 6D 20 
+Target at 16 [0x10..0x17]: 1D F6 58 C8 B4 99 ED DE 
+
+--- Loop Iteration: 0 ($var1 = 0) ---
+  C_Vars (Loop 0):
+    $var5 (XOR result) = 172 (0x000000AC)
+    $var6 (Data8 byte) = 220 (0xDC)
+    $var7 (Masked i32 from mem[0]) = 1936941312 (0x73736100)
+  Memory[0..7] after i32.store at offset 0:
+     [0x00..0x07]: AC 61 73 73 77 6F 72 64 
+  Calling func_table[0] (param 12)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: 36 37 C7 1A 26 47 76 F7 
+
+--- Loop Iteration: 1 ($var1 = 1) ---
+  C_Vars (Loop 1):
+    $var5 (XOR result) = 176 (0x000000B0)
+    $var6 (Data8 byte) = 135 (0x87)
+    $var7 (Masked i32 from mem[1]) = 639289088 (0x261AC700)
+  Memory[0..7] after i32.store at offset 1:
+     [0x00..0x07]: 36 B0 C7 1A 26 47 76 F7 
+  Calling func_table[0] (param 16)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: C7 1A 36 B0 76 F7 26 47 
+
+--- Loop Iteration: 2 ($var1 = 2) ---
+  C_Vars (Loop 2):
+    $var5 (XOR result) = 237 (0x000000ED)
+    $var6 (Data8 byte) = 219 (0xDB)
+    $var7 (Masked i32 from mem[2]) = -143216640 (0xF776B000)
+  Memory[0..7] after i32.store at offset 2:
+     [0x00..0x07]: C7 1A ED B0 76 F7 26 47 
+  Calling func_table[1] (param 13)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: 1D F6 58 A3 E4 C8 EE DE 
+
+--- Loop Iteration: 3 ($var1 = 3) ---
+  C_Vars (Loop 3):
+    $var5 (XOR result) = 200 (0x000000C8)
+    $var6 (Data8 byte) = 107 (0x6B)
+    $var7 (Masked i32 from mem[3]) = -288824320 (0xEEC8E400)
+  Memory[0..7] after i32.store at offset 3:
+     [0x00..0x07]: 1D F6 58 C8 E4 C8 EE DE 
+  Calling func_table[0] (param 8)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: F6 58 C8 1D C8 EE DE E4 
+
+--- Loop Iteration: 4 ($var1 = 4) ---
+  C_Vars (Loop 4):
+    $var5 (XOR result) = 180 (0x000000B4)
+    $var6 (Data8 byte) = 124 (0x7C)
+    $var7 (Masked i32 from mem[4]) = -455152128 (0xE4DEEE00)
+  Memory[0..7] after i32.store at offset 4:
+     [0x00..0x07]: F6 58 C8 1D B4 EE DE E4 
+  Calling func_table[0] (param 20)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: DC 61 8F 85 4D 4E EB EE 
+
+--- Loop Iteration: 5 ($var1 = 5) ---
+  C_Vars (Loop 5):
+    $var5 (XOR result) = 179 (0x000000B3)
+    $var6 (Data8 byte) = 253 (0xFD)
+    $var7 (Masked i32 from mem[5]) = -588322048 (0xDCEEEB00)
+  Memory[0..7] after i32.store at offset 5:
+     [0x00..0x07]: DC 61 8F 85 4D B3 EB EE 
+  Calling func_table[1] (param 19)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: 7B 2C E4 0E 5D 77 6F 9A 
+
+--- Loop Iteration: 6 ($var1 = 6) ---
+  C_Vars (Loop 6):
+    $var5 (XOR result) = 2 (0x00000002)
+    $var6 (Data8 byte) = 109 (0x6D)
+    $var7 (Masked i32 from mem[6]) = -2015585792 (0x87DC9A00)
+  Memory[0..7] after i32.store at offset 6:
+     [0x00..0x07]: 7B 2C E4 0E 5D 77 02 9A 
+  Calling func_table[0] (param 2)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: 1E 0B B9 C3 D7 9D 80 66 
+
+--- Loop Iteration: 7 ($var1 = 7) ---
+  C_Vars (Loop 7):
+    $var5 (XOR result) = 70 (0x00000046)
+    $var6 (Data8 byte) = 32 (0x20)
+    $var7 (Masked i32 from mem[7]) = -611853312 (0xDB87DC00)
+  Memory[0..7] after i32.store at offset 7:
+     [0x00..0x07]: 1E 0B B9 C3 D7 9D 80 46 
+  Calling func_table[0] (param 6)
+  Memory[0..7] after rotation:
+     [0x00..0x07]: 2C E4 0E 7B 77 02 1A 5D 
+
+--- CHECK FUNCTION END ---

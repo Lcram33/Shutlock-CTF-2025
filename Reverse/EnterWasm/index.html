@@ -1,0 +1,120 @@
+<!doctype html>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    html,
+    body {
+        padding: 0;
+        padding-bottom: 32px;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgb(234, 231, 220);
+        background: linear-gradient(222deg, rgba(234, 231, 220, 1) 0%, rgba(205, 196, 163, 1) 100%);
+    }
+
+    #board {
+        display: grid;
+        grid-template-rows: repeat(18, 30px);
+        grid-template-columns: repeat(10, 30px);
+        grid-auto-rows: 30px;
+        grid-gap: 4px;
+        width: 340px;
+        height: 612px;
+        border: solid 8px #E98074;
+        padding-left: 4px;
+    }
+
+    #input-container {
+        color: #000000;
+        font-size: 48px;
+        font-family: monospace;
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    #logme {
+        color: #111111;
+        font-size: 40px;
+        font-family: monospace;
+    }
+</style>
+
+<body>
+    <input id="input-container" autofocus></input>
+    <pre id="logme" > </pre>
+
+    <script type="text/javascript">
+
+        let memory;
+
+        function loclog( msg, erase=true)
+        {
+            let logb = document.getElementById("logme")
+            if (erase)
+                logb.innerText = ""
+
+            logb.innerText += "[+] " + msg + "\n";
+        }
+
+        function log( length )
+        {
+            let bytes = memory.slice(0, length );
+            let msg = new TextDecoder('utf8').decode(bytes);
+
+            let logb = document.getElementById("logme")
+            logb.innerText += "[+] " + msg + "\n";
+        }
+
+        WebAssembly
+            .instantiateStreaming( fetch("encode.wasm", {cache: "no-cache"} ), { js: { debug: (x)=> log(x)}} )
+            .then(wasm => {
+                const wasmi = wasm.instance.exports;
+                memory = wasm.instance.exports.memory.buffer;
+
+                document.addEventListener("keydown", (e) => {
+                    switch (e.key) {
+                        case "Enter":
+                            let text = document.getElementById("input-container").value;
+                            let textLen = new TextEncoder().encode(text);
+
+                            if ( textLen.length != 8 )
+                            {
+                                loclog("8 characters (ISO-8859-1) needed.");
+                                break
+                            }
+
+                            document.getElementById("logme").innerText = "";
+
+                            let textArray = new Uint8Array( wasm.instance.exports.memory.buffer );
+                            textArray.set(textLen)
+
+                            let res = wasmi.check();
+                            if (res == 0)
+                                loclog("Access Denied");
+                            
+                            if (res == 1)
+                                loclog("Access Granted: SHLK{" + text + "}");
+
+                            break;
+                        }
+                });
+            });
+        
+            window.onload = function() {
+                var input = document.getElementById("input-container").focus();
+            }
+    </script>
+</body>

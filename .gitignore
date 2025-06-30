@@ -1,0 +1,14 @@
+# Trash files
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.sage.py
+
+# Work in progress
+WIP/
+
+# Archive files
+*.tar.gz
+
+# Large video file
+video_encrypted.mp4
