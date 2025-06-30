@@ -13,8 +13,7 @@ Ils sont bien identifiés.
 
 ## Prérequis
 
-![cherrytree_icon](https://www.giuspen.com/icons_softw/cherrytree.png)
-[Installer CherryTree](https://www.giuspen.com/cherrytree/)
+<img src="img/cherrytree.png" /> <a href="https://www.giuspen.com/cherrytree/">Installer CherryTree</a>
 
 ## Histoire
 

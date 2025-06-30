@@ -158,3 +158,14 @@ SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure
 ### PWN
 
 *Je n'ai pas effectué de challenge dans cette catégorie*
+
+## Scoreboard
+
+J'ai terminé 25e avec un total de 2 696 points. Grand progrès pour mon second gros CTF 🥳
+
+Fichier json de CTFd pour le scoreboard : [scoreboard.json](scoreboard/scoreboard.json)
+
+<details>
+<summary>Image (longue)</summary>
+<img src="scoreboard/scoreboard.png" width=800 />
+</details>
