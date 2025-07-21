@@ -129,7 +129,7 @@ SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure
 
 ### OSINT
 
-[Page dédiée](OSINT/) (j'ai travaillé avec CherryTree)
+🟢 [Whispers of Envy 1/2](OSINT/)
 
 ### Reverse
 
