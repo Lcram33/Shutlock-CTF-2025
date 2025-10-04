@@ -1,7 +1,7 @@
 # Shutlock CTF 2025 - Write Ups
 
 <div align="center">
-    <img src="logo.png" width=256 />
+    <img src="img/logo.png" width=256 />
 </div>
 
 Mes writeups pour le Shutlock CTF édition 2025 en tant que participant.
@@ -11,15 +11,25 @@ Mes writeups pour le Shutlock CTF édition 2025 en tant que participant.
 
 ## L'événement
 
+<p align="center"> 
+  <a href="https://github.com/Lcram33/404CTF-2025">
+    <img src="img/dgsi.png" width=160 />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/Lcram33/Shutlock-CTF-2025" >
+    <img src="img/epita.png" width=170 />
+  </a>
+</p>
+
 20/06/2025 20h - 30/06/2025 20h
 
+> Vous êtes plutôt Forensic, Reverse, Pwn, OSINT, Crypto, Web et autres ? Dans quel domaine de la sécurité informatique excellez-vous?
+> 
+> Que vous soyez novice, expert ou simplement passionné d'informatique et désireux de découvrir les métiers techniques de la Direction Générale de la Sécurité Intérieure (DGSI), participez à la deuxième édition du CTF. Repoussez vos limites et révélez votre talent ! Les meilleurs compétiteurs se verront récompensés.
+> 
+> SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure humaine entre les alternants de l'EPITA et les experts de la DGSI. Nous espérons que vous prendrez autant de plaisir à résoudre ces challenges que nous en avons eu à les co-créer.
+
 https://shutlock.fr/
-
-Vous êtes plutôt Forensic, Reverse, Pwn, OSINT, Crypto, Web et autres ? Dans quel domaine de la sécurité informatique excellez-vous?
-
-Que vous soyez novice, expert ou simplement passionné d'informatique et désireux de découvrir les métiers techniques de la Direction Générale de la Sécurité Intérieure (DGSI), participez à la deuxième édition du CTF. Repoussez vos limites et révélez votre talent ! Les meilleurs compétiteurs se verront récompensés.
-
-SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure humaine entre les alternants de l'EPITA et les experts de la DGSI. Nous espérons que vous prendrez autant de plaisir à résoudre ces challenges que nous en avons eu à les co-créer.
 
 ## Code couleur
 
@@ -50,7 +60,7 @@ SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure
 <img src="Histoire/img/Introduction/CTFD_STORY_Diapositive21.jpeg" width=700 />
 </details>
 
-⚪️ OSINT - [Un pingouin dans une botte de foin](OSINT/)
+⚪️ OSINT - [Un pingouin dans une botte de foin](OSINT/UnPingouinDansUneBotteDeFoin/UnPingouinDansUneBotteDeFoin.MD)
 <br>ou<br>
 ⚪️ Forensic - Le Générique de Trop (non résolu)
 
@@ -71,7 +81,7 @@ SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure
 <img src="Histoire/img/Checkpoint2/CTFD_STORY_Diapositive36.jpeg" width=700 />
 </details>
 
-🟢 OSINT - [Find the Lab](OSINT/)
+🟢 OSINT - [Find the Lab](OSINT/FindTheLab/FindTheLab.MD)
 <br>ou<br>
 🟢 Misc - Une affiche étrange (non résolu)
 
@@ -108,7 +118,7 @@ SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure
 
 🔵 Misc - A mission for Charles Carmichael (non résolu)
 <br>ou<br>
-🔵 OSINT - [Une simple conversation ](OSINT/)
+🔵 OSINT - [Une simple conversation ](OSINT/UneSimpleConversation/UneSimpleConversation.MD)
 
 <details>
 <summary>Checkpoint 6</summary>
@@ -129,7 +139,10 @@ SHUTLOCK est le fruit d'une très étroite collaboration et d'une belle aventure
 
 ### OSINT
 
-🟢 [Whispers of Envy 1/2](OSINT/)
+* Pour cette catégorie, j'ai utilisé <img src="img/cherrytree.png" height=25 /> <a href="https://www.giuspen.com/cherrytree/">CherryTree</a> pour organiser mes recherches.
+* Le fichier [OSINT-Shutlock-2025.ctb](OSINT/OSINT-Shutlock-2025.ctd) contient les énoncés (noeuds) et les sous-noeuds contiennent des pistes ou solutions. Ils sont bien identifiés.
+
+🟢 [Whispers of Envy 1/2](OSINT/WhispersOfEnvy1-2/WhispersOfEnvy1-2.MD)
 
 ### Reverse
 
